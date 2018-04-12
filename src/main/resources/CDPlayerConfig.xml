@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	<bean class="cn.edu.hqu.javaee.domain.cd.impl.CDPlayer">
+	<property name="compactDisc" ref="albums"></property>
+	</bean>
+	<bean id="albums"
+		class="cn.edu.hqu.javaee.domain.cd.impl.Albums">
+	<property name="tracks">
+		<list>
+			<value>01．跨时代</value>
+			<value>02．说了再见</value>
+			<value>03．烟花易冷</value>
+			<value>04．免费教学录影带</value>
+			<value>05．好久不见</value>
+			<value>06．雨下一整晚</value>
+			<value>07．嘻哈空姐</value>
+			<value>08．我落泪·情绪零碎</value>
+		</list>
+	</property>
+	<property name="artist" value="周杰伦"/>
+	<property name="title" value="跨时代"/>
+	</bean>
+</beans>
